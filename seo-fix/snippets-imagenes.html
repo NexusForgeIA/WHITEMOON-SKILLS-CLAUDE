@@ -1,0 +1,139 @@
+<!-- ===================================================================
+     SNIPPETS LISTOS PARA COPIAR/PEGAR — Día 3-4
+     Reemplaza los bloques actuales del index.html por estos.
+     =================================================================== -->
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 1. NAV LOGO — sustituye al base64 actual                      │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<a href="javascript:void(0)" class="nav-logo"
+   onclick="window.scrollTo({top:0,behavior:'smooth'})"
+   aria-label="WhiteMoon - Inicio">
+  <picture>
+    <source srcset="/logo.webp" type="image/webp">
+    <img src="/logo.png"
+         alt="WhiteMoon Agencia IA"
+         width="180" height="52"
+         style="height:52px;width:auto;"
+         fetchpriority="high">
+  </picture>
+</a>
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 2. HERO LOGO — sustituye al base64 grande del hero            │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<div style="display:flex;justify-content:center;margin-bottom:36px;">
+  <picture>
+    <source srcset="/logo-hero.webp" type="image/webp">
+    <img src="/logo-hero.png"
+         alt="WhiteMoon Agencia de Inteligencia Artificial"
+         width="420" height="190"
+         style="max-width:380px;width:80%;height:auto;
+                filter:drop-shadow(0 0 32px rgba(124,77,255,0.35));"
+         fetchpriority="high">
+  </picture>
+</div>
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 3. FOOTER LOGO — corrige el src vacío                         │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<a href="javascript:void(0)" class="foot-brand"
+   onclick="window.scrollTo({top:0,behavior:'smooth'})"
+   aria-label="WhiteMoon">
+  <img class="foot-logo"
+       src="/logo.png"
+       alt="WhiteMoon"
+       width="180" height="52"
+       loading="lazy">
+</a>
+
+<!-- Y BORRA este <script> que ya no hace falta:
+<script>
+  (function(){
+    var navImg = document.querySelector('.nav-logo img');
+    var footImg = document.querySelector('.foot-logo');
+    if (navImg && footImg) footImg.src = navImg.src;
+  })();
+</script>
+-->
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 4. IMÁGENES DE LOS 4 PASOS (sección Servicios)                │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<!-- PASO 1 -->
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80&fm=webp"
+     alt="Llamada de diagnóstico inicial con WhiteMoon para implantar IA"
+     width="500" height="333"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+
+<!-- PASO 2 -->
+<img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=500&q=80&fm=webp"
+     alt="Diseño y configuración del agente IA personalizado"
+     width="500" height="333"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+
+<!-- PASO 3 -->
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80&fm=webp"
+     alt="Instalación del chatbot IA en tu web en menos de 1 hora"
+     width="500" height="333"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+
+<!-- PASO 4 -->
+<img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=80&fm=webp"
+     alt="Tu negocio funcionando con IA 24 horas al día, 365 días al año"
+     width="500" height="333"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 5. IMÁGENES DE PRICING (Pack Advance + Pack Pyme)             │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<!-- PACK ADVANCE -->
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80&fm=webp"
+     alt="Pack Advance - chatbot IA conversacional 24/7 para tu negocio"
+     width="800" height="220"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover;transition:transform .4s">
+
+<!-- PACK PYME -->
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80&fm=webp"
+     alt="Pack Pyme - web profesional con chatbot IA y dominio incluido"
+     width="800" height="220"
+     loading="lazy" decoding="async"
+     style="width:100%;height:100%;object-fit:cover">
+
+
+<!-- ┌───────────────────────────────────────────────────────────────┐
+     │ 6. <head> LIMPIO — sustituye los preconnect duplicados        │
+     └───────────────────────────────────────────────────────────────┘ -->
+
+<!-- Performance hints -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://wa.me">
+<link rel="dns-prefetch" href="https://images.unsplash.com">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Fuente Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
