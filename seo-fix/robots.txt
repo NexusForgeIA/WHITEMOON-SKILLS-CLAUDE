@@ -1,0 +1,27 @@
+# robots.txt — whitemoon.es
+# Permite a todos los crawlers indexar todo el sitio
+
+User-agent: *
+Allow: /
+
+# Bloquea solo rutas técnicas si las hubiera
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /*.json$
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://whitemoon.es/sitemap.xml
+
+# Crawlers de IA — opcional, déjalos pasar para AI SEO (AEO/GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
