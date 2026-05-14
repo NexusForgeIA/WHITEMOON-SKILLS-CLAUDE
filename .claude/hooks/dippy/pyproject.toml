@@ -1,0 +1,77 @@
+[project]
+name = "dippy"
+version = "0.2.7"
+description = "Approval autopilot for Claude Code — stay in the flow by automatically allowing safe commands"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Lily Dayton", email = "lily.dayton.git@gmail.com" }
+]
+keywords = ["claude", "claude-code", "hook", "bash", "permissions", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Build Tools",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ldayton/Dippy"
+Repository = "https://github.com/ldayton/Dippy"
+Issues = "https://github.com/ldayton/Dippy/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+dippy = "dippy.dippy:main"
+dippy-statusline = "dippy.dippy_statusline:main"
+
+[build-system]
+requires = ["uv_build>=0.7.19"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short -n auto"
+
+[tool.coverage.run]
+source = ["src/dippy"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]
+
+[tool.dippy.vendor]
+parable-commit = "9f7e15734bd3e5bb9fe252d2491d6f61572f0e57"
+parable-sha256 = "34aef27c989befa67daf5b0036ff90432baac350c3d79f7add711d883bca05d1"
+
+[tool.ruff]
+exclude = ["src/dippy/vendor"]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0",
+    "pytest-xdist>=3.0",
+    "ruff>=0.8.0",
+]

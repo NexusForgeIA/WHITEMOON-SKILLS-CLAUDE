@@ -1,0 +1,39 @@
+# Dippy config — WhiteMoon
+# https://github.com/ldayton/Dippy/wiki
+
+#---- Bloqueos críticos ----#
+deny rm -rf "Demasiado destructivo — confirma manualmente"
+deny-redirect **/.env* "Nunca escribir secretos automáticamente"
+deny-redirect **/.env "Nunca escribir secretos automáticamente"
+deny git push --force "Force-push prohibido — usa --force-with-lease si es imprescindible"
+deny git push -f "Force-push prohibido — usa --force-with-lease si es imprescindible"
+deny git reset --hard "Confirma antes de descartar trabajo"
+deny git clean -fd "Confirma antes de borrar archivos sin trackear"
+deny git checkout -- "Confirma antes de descartar cambios locales"
+
+#---- Reglas WhiteMoon ----#
+deny git push origin main "Nunca pushear directo a main — usa rama + PR"
+deny git push origin master "Nunca pushear directo a master — usa rama + PR"
+
+#---- Paquetes / supply chain ----#
+deny npm publish "Confirma antes de publicar paquetes"
+deny npm unpublish "Confirma antes de despublicar"
+deny pip install "Usa el gestor de dependencias del proyecto"
+
+#---- Cloud (precaución) ----#
+deny aws s3 rm "Operación destructiva en S3 — confirma"
+deny kubectl delete "Operación destructiva en k8s — confirma"
+deny terraform apply "Confirma antes de aplicar cambios de infra"
+deny terraform destroy "Confirma antes de destruir infra"
+
+#---- Permitidos seguros ----#
+allow git status
+allow git log
+allow git diff
+allow git branch
+allow ls
+allow cat
+allow pwd
+allow grep
+allow find
+allow which
