@@ -159,6 +159,12 @@ agent-browser skills get agentcore      # AWS Bedrock AgentCore
 - `--max-output 50000` — evita saturar contexto
 - Cookies/state files en plaintext — añadir a `.gitignore`
 
+## NotebookLM Skills
+Prompts para NotebookLM en
+.claude/skills/notebooklm/
+Útil para: demos comerciales,
+documentación interna, explicar RAG.
+
 ## Spec-Kit (.specify/)
 Flujo obligatorio para proyectos nuevos:
 `/speckit.specify` → `/speckit.clarify` → `/speckit.plan` → `/speckit.tasks` → `/speckit.implement`
