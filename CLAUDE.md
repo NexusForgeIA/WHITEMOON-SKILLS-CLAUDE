@@ -61,6 +61,24 @@ Listado completo: `ls .claude/skills/scientific/`
 
 ## Hooks (.claude/hooks/)
 
+### claude-mem — memoria persistente entre sesiones
+- Captura observaciones automáticamente en cada tool call
+- Las comprime semánticamente y las inyecta en sesiones futuras
+- Web viewer: <http://localhost:37777>
+- Setup: ver `.claude/hooks/claude-mem/INSTALL.md`
+
+Instalación (una sola vez por dev):
+```bash
+npx claude-mem install
+```
+Registra plugin a nivel de usuario (`~/.claude/plugins/`), activa hooks
+SessionStart/UserPromptSubmit/PostToolUse/PreToolUse/Stop, y persiste
+contexto en `~/.claude-mem/`. Reinicia Claude Code tras instalar.
+
+Comandos: `npx claude-mem status|start|stop|search "..."|update`
+
+Privacidad: envolver contenido sensible con `<private>...</private>`.
+
 ### Dippy — auto-aprobación de bash seguros
 - Auto-aprueba `ls`, `git status`, pipelines de lectura, etc.
 - Bloquea destructivos (`rm -rf`, `git push --force`, `terraform destroy`, …)
@@ -97,3 +115,4 @@ Flujo obligatorio para proyectos nuevos:
 - Skills científicas: <https://github.com/K-Dense-AI/claude-scientific-skills>
 - Slash-commands extra: <https://github.com/hesreallyhim/awesome-claude-code>
 - Dippy hook: <https://github.com/ldayton/Dippy>
+- claude-mem: <https://github.com/thedotmack/claude-mem>
