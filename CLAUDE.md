@@ -98,6 +98,67 @@ Y en `~/.claude/settings.json`:
 
 Alternativa vendored: `python3 .claude/hooks/dippy/bin/dippy-hook`
 
+## Agent Browser (Vercel Labs)
+Browser automation para agentes IA.
+Permite a Claude Code controlar un navegador real.
+
+### Casos de uso WhiteMoon:
+- Auditar webs de prospectos automáticamente
+- Verificar chatbots instalados en producción
+- Capturar screenshots de demos
+- Prospección automática para Scout CRM
+
+### Comandos:
+- Navegar a una URL y extraer información
+- Hacer clicks y rellenar formularios
+- Tomar screenshots
+- Extraer datos estructurados de webs
+
+### Instalación
+```bash
+npm install -g agent-browser
+agent-browser install            # descarga Chrome for Testing (primera vez)
+# Linux: agent-browser install --with-deps
+```
+
+Skill registrada en `.claude/skills/agent-browser/` (Claude la usa
+automáticamente cuando la tarea implica navegador). Plugin manifest
+vendorizado en `.claude/plugins/agent-browser/`.
+
+### Flujo recomendado (snapshot + refs)
+```bash
+agent-browser open https://prospecto.com
+agent-browser snapshot -i --json     # accessibility tree con @e1, @e2, …
+agent-browser click @e2              # interactúa por ref
+agent-browser screenshot demo.png
+agent-browser close
+```
+
+### Comandos útiles
+- `agent-browser snapshot -i` — árbol accesible con refs (@eN)
+- `agent-browser find role button click --name "Submit"` — locator semántico
+- `agent-browser screenshot --annotate` — captura con etiquetas numeradas
+- `agent-browser chat "<instrucción>"` — control por lenguaje natural
+- `agent-browser get text @e1` / `get url` / `get title`
+- `agent-browser network har start|stop` — grabación HAR
+- `agent-browser diff url <a> <b>` — diff visual/snapshot entre dos URLs
+
+### Skills especializadas
+```bash
+agent-browser skills get core           # workflows + troubleshooting
+agent-browser skills get dogfood        # QA / exploratory testing
+agent-browser skills get electron       # apps de escritorio (Slack, VS Code, …)
+agent-browser skills get slack          # automatización de Slack
+agent-browser skills get vercel-sandbox # ejecución en Vercel Sandbox
+agent-browser skills get agentcore      # AWS Bedrock AgentCore
+```
+
+### Privacidad / seguridad
+- `--allowed-domains "example.com,*.example.com"` — allowlist
+- `--content-boundaries` — delimita output de páginas para el LLM
+- `--max-output 50000` — evita saturar contexto
+- Cookies/state files en plaintext — añadir a `.gitignore`
+
 ## Spec-Kit (.specify/)
 Flujo obligatorio para proyectos nuevos:
 `/speckit.specify` → `/speckit.clarify` → `/speckit.plan` → `/speckit.tasks` → `/speckit.implement`
@@ -116,3 +177,4 @@ Flujo obligatorio para proyectos nuevos:
 - Slash-commands extra: <https://github.com/hesreallyhim/awesome-claude-code>
 - Dippy hook: <https://github.com/ldayton/Dippy>
 - claude-mem: <https://github.com/thedotmack/claude-mem>
+- agent-browser: <https://github.com/vercel-labs/agent-browser>
