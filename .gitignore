@@ -1,0 +1,60 @@
+# ─── Secretos / credenciales ────────────────────────────────────────────
+.env
+.env.local
+.env.*
+!.env.example
+*.key
+*_key.json
+*.pem
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+secrets/
+credentials/
+.npmrc
+.netrc
+
+# ─── Claude Code ────────────────────────────────────────────────────────
+.claude/settings.local.json
+.claude-mem/
+.agent-browser/
+
+# ─── Node / JS ──────────────────────────────────────────────────────────
+node_modules/
+.pnp.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn/
+
+# ─── Python ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ─── OS / editor ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ─── Build / temp ───────────────────────────────────────────────────────
+dist/
+build/
+*.log
+.coverage
+coverage/
+.cache/
+tmp/
