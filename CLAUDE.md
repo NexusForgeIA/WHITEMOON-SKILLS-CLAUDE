@@ -42,3 +42,19 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 2. Simplicity First — mínimo código que resuelve el problema
 3. Surgical Changes — tocar solo lo necesario
 4. Goal-Driven Execution — definir criterios de éxito verificables
+
+## SKILLS INSTALADAS
+Antes de cualquier tarea leer las skills relevantes en .claude/skills/
+Skills disponibles:
+- vercel-sandbox — automatización Chrome en Vercel microVMs
+- deal-sourcing — prospección de empresas y outreach a founders
+- competitive-analysis — decks de análisis competitivo
+- frontend-ui-engineering — UI de producción accesible y sin estética AI
+- test-engineer — diseño de tests, cobertura QA, TDD
+- skill-creator — crear y actualizar skills
+- seo-geo-aeo — SEO, GEO y AEO para WhiteMoon
+- chatbot — stack de agentes IA y edge functions
+- supabase — integración Supabase WhiteMoon
+- ui-design — diseño premium WhiteMoon
+- git-flow — flujo de ramas y PRs
+- taste — diseño premium frontend
