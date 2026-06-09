@@ -47,5 +47,4 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 Antes de cualquier tarea leer las skills relevantes en .claude/skills/
 Skills disponibles:
 - frontend-ui-engineering — UI de producción accesible y sin estética AI
-- test-engineer — diseño de tests, cobertura QA, TDD
 - skill-creator — crear y actualizar skills
