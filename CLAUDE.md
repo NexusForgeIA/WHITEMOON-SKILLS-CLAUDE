@@ -44,7 +44,89 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 4. Goal-Driven Execution — definir criterios de éxito verificables
 
 ## SKILLS INSTALADAS
-Antes de cualquier tarea leer las skills relevantes en .claude/skills/
-Skills disponibles:
-- frontend-ui-engineering — UI de producción accesible y sin estética AI
-- skill-creator — crear y actualizar skills
+Antes de cualquier tarea leer las skills relevantes.
+
+### .claude/skills/ (41 skills)
+- agent-browser
+- api-and-interface-design
+- browser-testing-with-devtools
+- ci-cd-and-automation
+- code-review-and-quality
+- code-simplification
+- context-engineering
+- debugging-and-error-recovery
+- deprecation-and-migration
+- documentation-and-adrs
+- frontend-ui-engineering
+- git-workflow-and-versioning
+- idea-refine
+- impeccable
+- incremental-implementation
+- notebooklm
+- notebooklm-slides
+- performance-optimization
+- planning-and-task-breakdown
+- security-and-hardening
+- shipping-and-launch
+- source-driven-development
+- spec-driven-development
+- speckit-analyze
+- speckit-checklist
+- speckit-clarify
+- speckit-constitution
+- speckit-git-commit
+- speckit-git-feature
+- speckit-git-initialize
+- speckit-git-remote
+- speckit-git-validate
+- speckit-implement
+- speckit-plan
+- speckit-specify
+- speckit-tasks
+- speckit-taskstoissues
+- test-driven-development
+- ui-ux-pro-max
+- web-design-systems
+
+### skills/ (skills WhiteMoon)
+- chatbot
+- git-flow
+- seo-geo-aeo
+- supabase
+- ui-design
+
+---
+
+## PROTOCOLO DISEÑO WEB — OBLIGATORIO
+Cuando crees o diseñes cualquier web nueva para un cliente
+(dental, gestoría, taller, estética, inmobiliaria, etc.)
+ANTES de escribir HTML/CSS:
+
+1. Leer .claude/skills/ui-ux-pro-max/SKILL.md
+   → paletas, tipografía, layouts, componentes premium
+   → usar search.py para buscar estilos del sector:
+     python3 .claude/skills/ui-ux-pro-max/scripts/search.py "[sector] dark premium"
+
+2. Leer .claude/skills/impeccable/SKILL.md
+   → craft, shape, audit, polish, animate
+   → referencias en .claude/skills/impeccable/reference/
+
+3. Leer .claude/skills/frontend-ui-engineering/SKILL.md
+   → UI de producción accesible y sin estética genérica AI
+
+4. Leer .claude/skills/web-design-systems/SKILL.md
+   → sistemas de diseño coherentes y escalables
+
+REGLAS ANTI-GENÉRICO (nunca violar):
+- NUNCA layouts completamente centrados y simétricos
+- NUNCA cards icono+título+descripción idénticas
+- NUNCA gradientes azul-morado genéricos
+- NUNCA tipografía system-ui sin carácter
+- SIEMPRE asimetría intencional en layouts
+- SIEMPRE tipografía con peso y contraste real
+- SIEMPRE espaciado generoso y deliberado
+- SIEMPRE jerarquía visual clara
+- SIEMPRE movimiento sutil con propósito
+
+El design system del cliente tiene prioridad.
+Las skills lo complementan y elevan.
