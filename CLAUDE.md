@@ -44,17 +44,50 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 4. Goal-Driven Execution — definir criterios de éxito verificables
 
 ## SKILLS INSTALADAS
-Antes de cualquier tarea leer las skills relevantes en .claude/skills/
-Skills disponibles:
-- vercel-sandbox — automatización Chrome en Vercel microVMs
-- deal-sourcing — prospección de empresas y outreach a founders
-- competitive-analysis — decks de análisis competitivo
+Antes de cualquier tarea leer las skills relevantes en `.claude/skills/`.
+
+> NOTA DE CARGA: este listado es un índice. Claude Code auto-descubre las skills
+> de `.claude/skills/*/SKILL.md` solo al trabajar DENTRO de este repo. Para que
+> carguen en CUALQUIER sesión (otros repos) deben copiarse a `~/.claude/skills/`
+> (global) o instalarse como plugin.
+
+### Ingeniería (`.claude/skills/`) — 23
+- api-and-interface-design — diseño de APIs/interfaces estables (REST, GraphQL, contratos)
+- browser-testing-with-devtools — testing en navegador real vía Chrome DevTools MCP
+- ci-cd-and-automation — pipelines CI/CD, quality gates y despliegue
+- code-review-and-quality — revisión de código multi-eje antes de merge
+- code-simplification — refactor para claridad sin cambiar comportamiento
+- context-engineering — optimizar contexto y reglas del agente por proyecto
+- debugging-and-error-recovery — debugging sistemático de causa raíz
+- deprecation-and-migration — deprecación y migración de sistemas/APIs
+- documentation-and-adrs — registrar decisiones (ADRs) y documentación
 - frontend-ui-engineering — UI de producción accesible y sin estética AI
-- test-engineer — diseño de tests, cobertura QA, TDD
-- skill-creator — crear y actualizar skills
-- seo-geo-aeo — SEO, GEO y AEO para WhiteMoon
+- git-workflow-and-versioning — prácticas de git, ramas y conflictos
+- idea-refine — refinar ideas (pensamiento divergente/convergente)
+- incremental-implementation — entregar cambios de forma incremental
+- performance-optimization — rendimiento y Core Web Vitals
+- planning-and-task-breakdown — desglosar el trabajo en tareas ordenadas
+- security-and-hardening — endurecer el código frente a vulnerabilidades
+- shipping-and-launch — checklist de lanzamiento a producción y rollback
+- source-driven-development — decisiones basadas en documentación oficial
+- spec-driven-development — crear specs antes de codificar
+- test-driven-development — desarrollo guiado por tests
+- notebooklm-slides — prompts de diseño para slides NotebookLM/Kael.im
+- agent-browser — automatización de navegador para agentes (CLI)
+- notebooklm — ⚠ README sin frontmatter: Claude Code NO la carga como skill (pendiente de arreglar)
+
+### WhiteMoon (`./skills/` y `./.agents/skills/`)
 - chatbot — stack de agentes IA y edge functions
 - supabase — integración Supabase WhiteMoon
+- seo-geo-aeo — SEO, GEO y AEO para WhiteMoon
 - ui-design — diseño premium WhiteMoon
 - git-flow — flujo de ramas y PRs
-- taste — diseño premium frontend
+- taste / high-end-visual-design / minimalist-ui / design-taste-frontend — diseño premium frontend
+
+### Negocio y meta (raíz `./`)
+- deal-sourcing — prospección de empresas y outreach a founders
+- competitive-analysis — decks de análisis competitivo
+- ai-readiness — evaluación de madurez IA de clientes
+- client-review — revisión periódica de cliente
+- skill-creator — crear y actualizar skills
+- vercel-sandbox — automatización Chrome en Vercel microVMs
