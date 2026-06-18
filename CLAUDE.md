@@ -46,7 +46,9 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 ## SKILLS INSTALADAS
 Antes de cualquier tarea leer las skills relevantes.
 
-### .claude/skills/ (41 skills)
+### .claude/skills/ (39 skills cargables)
+> `notebooklm/` existe en la carpeta pero NO se lista: su SKILL.md no tiene
+> frontmatter (es un README), así que Claude Code no la carga. Usa `notebooklm-slides`.
 - agent-browser
 - api-and-interface-design
 - browser-testing-with-devtools
@@ -62,7 +64,6 @@ Antes de cualquier tarea leer las skills relevantes.
 - idea-refine
 - impeccable
 - incremental-implementation
-- notebooklm
 - notebooklm-slides
 - performance-optimization
 - planning-and-task-breakdown
