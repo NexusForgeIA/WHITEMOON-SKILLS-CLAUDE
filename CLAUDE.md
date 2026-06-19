@@ -9,6 +9,11 @@ Lee estas skills en este orden ANTES de escribir una sola línea de HTML/CSS:
 3. ~/.claude/skills/frontend-design-pro/SKILL.md
 4. ~/.claude/skills/00-design-references/
 5. ~/.claude/skills/responsive-design/SKILL.md
+6. ~/.claude/skills/review-animations/SKILL.md  ← usar después de implementar motion
+
+> `review-animations` tiene `disable-model-invocation: true` — no se
+> auto-invoca. Úsala explícitamente tras implementar cualquier animación:
+> "revisa las animaciones con la skill review-animations antes del PR"
 
 ### Por qué Emil va primero
 Emil Kowalski (animations.dev) — los detalles que el usuario NUNCA nota
