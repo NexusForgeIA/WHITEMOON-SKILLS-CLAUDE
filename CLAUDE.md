@@ -1,3 +1,53 @@
+## OBLIGATORIO ANTES DE CUALQUIER DISEÑO WEB
+
+Aplica a TODOS los repos: demos de clientes, webs, whitemoon.es.
+
+Lee estas skills en este orden ANTES de escribir una sola línea de HTML/CSS:
+
+1. ~/.claude/skills/emil-design-eng/SKILL.md        ← PRIMERO SIEMPRE
+2. ~/.claude/skills/local-business-rebuild/SKILL.md
+3. ~/.claude/skills/frontend-design-pro/SKILL.md
+4. ~/.claude/skills/00-design-references/
+5. ~/.claude/skills/responsive-design/SKILL.md
+
+### Por qué Emil va primero
+Emil Kowalski (animations.dev) — los detalles que el usuario NUNCA nota
+conscientemente son los que hacen que algo se SIENTA bien.
+"All those unseen details combine to produce something that's just stunning,
+like a thousand barely audible voices all singing in tune." — Paul Graham
+
+### Plan obligatorio antes de codificar
+
+Escribe este bloque ANTES de escribir código:
+
+<!-- DESIGN PLAN
+  Palette: (4-6 hex exactos con justificación de uso)
+  Tipografía:
+    - Display: [fuente] — por qué esta y no otra
+    - Body: [fuente] — justificación
+  Firma visual única:
+    - [El elemento que hace que esta web NO parezca IA genérica]
+  Motion (Emil):
+    - Animaciones: ¿cuáles? ¿por qué? Easing y duración exactos.
+    - Sin animaciones decorativas — solo feedback o contexto.
+  Autocrítica — NO es ninguno de estos defaults de IA:
+    [ ] Fondo crema #F4F1EA + serif display + acento terracota
+    [ ] Fondo negro + acento acid-green o vermilion
+    [ ] Broadsheet dense con hairline rules
+  Si NO pasa: revisar el plan antes de continuar.
+-->
+
+### Reglas universales WhiteMoon — diseño web
+- Cero emojis en webs de clientes
+- Sin border-radius > 4px en webs profesionales
+- Sin gradientes de color
+- Sin cards genéricas icono+título+descripción
+- Sin sombras excesivas
+- Layout asimétrico donde sea posible
+- Animaciones solo con propósito: feedback o contexto, nunca decoración
+
+---
+
 # CLAUDE.md — WhiteMoon Agencia IA
 
 ## EMPRESA
