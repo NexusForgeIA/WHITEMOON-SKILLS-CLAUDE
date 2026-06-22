@@ -98,6 +98,12 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 3. Surgical Changes — tocar solo lo necesario
 4. Goal-Driven Execution — definir criterios de éxito verificables
 
+## REGLA DE DISEÑO — LEER SIEMPRE PRIMERO
+Antes de cualquier demo o web visual:
+→ Leer skills/design-override/SKILL.md
+→ Nivel mínimo: linear.app / vercel.com
+→ Nunca plantillas genéricas de Tailwind/shadcn
+
 ## SKILLS INSTALADAS
 Antes de cualquier tarea leer las skills relevantes.
 
