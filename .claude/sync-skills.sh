@@ -180,3 +180,25 @@ fi
 total=$(find "$GLOBAL" -mindepth 1 -maxdepth 1 -type d | wc -l)
 echo ""
 echo "Total en global: $total skills · actualizadas ${#updated[@]} · sin cambios ${#unchanged[@]} · externas ${#skipped[@]}"
+
+# --- Auto-copia del propio script al repo (SOLO copia, sin commit) ---------
+# Si la versión viva ($CLAUDE_DIR/sync-skills.sh) difiere de la copia versionada
+# del repo (.claude/sync-skills.sh) Y es más nueva (mtime), la copia para que el
+# usuario la commitee a mano. Si la del repo fuese más nueva, NO la pisa: avisa.
+SELF_SRC="$CLAUDE_DIR/sync-skills.sh"
+SELF_DST="$REPO/.claude/sync-skills.sh"
+if [ -f "$SELF_SRC" ] && ! diff -q "$SELF_SRC" "$SELF_DST" >/dev/null 2>&1; then
+  if [ "$SELF_SRC" -nt "$SELF_DST" ]; then        # -nt: true también si falta el destino
+    mkdir -p "$(dirname "$SELF_DST")"
+    if cp "$SELF_SRC" "$SELF_DST"; then
+      echo ""
+      echo "↗ sync-skills.sh copiado al repo (versión viva más nueva):"
+      echo "   $SELF_DST"
+      echo "   → commitéalo a mano cuando quieras versionar el cambio."
+    fi
+  else
+    echo ""
+    echo "⚠ sync-skills.sh: la copia viva difiere pero NO es más nueva que la del repo."
+    echo "   No se ha tocado. Revisa cuál es la buena: $SELF_DST"
+  fi
+fi
