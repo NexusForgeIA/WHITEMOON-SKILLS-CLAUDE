@@ -157,6 +157,9 @@ Antes de cualquier tarea leer las skills relevantes.
 - supabase
 - ui-design
 
+### Bases de conocimiento
+- workflows-venta-whitemoon/ → catálogo de automatizaciones vendibles + playbook de construcción (n8n como receta; se construye nativo en el Supabase del cliente, nunca n8n en producción).
+
 ---
 
 ## PROTOCOLO DISEÑO WEB — OBLIGATORIO
