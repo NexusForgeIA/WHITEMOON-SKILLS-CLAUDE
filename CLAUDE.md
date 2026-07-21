@@ -152,6 +152,7 @@ Antes de cualquier tarea leer las skills relevantes.
 
 ### skills/ (skills WhiteMoon)
 - chatbot
+- deploy-cache → caché real en producción (GitHub Pages + Cloudflare): todo con `max-age=14400` (4 h). Leer antes de asumir que "el cambio no llega por caché" o que hay que bumpear el `?v=`.
 - git-flow
 - seo-geo-aeo
 - supabase
