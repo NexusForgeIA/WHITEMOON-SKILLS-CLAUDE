@@ -158,6 +158,44 @@ Antes de cualquier tarea leer las skills relevantes.
 - supabase
 - ui-design
 
+### skills/ — set SEO (17 skills de Vicky Lalwani)
+Set completo instalado desde `skills-seo`. README del set en
+`skills/skills-seo/README.md` (no es una skill: solo documentación).
+
+**On-page y contenido**
+- meta-optimizer → reescribe title tags y meta descriptions para ganar CTR (3 opciones rankeadas por página).
+- content-gap → compara la página con el top 10 y lista lo que le falta para competir.
+- internal-linker → detecta páginas huérfanas y propone enlaces internos con su anchor text.
+- schema-generator → genera JSON-LD válido y pegable para cualquier tipo de página.
+- cannibalization-finder → encuentra páginas del mismo sitio peleando por la misma keyword y recomienda la acción.
+- ctr-booster → localiza páginas con muchas impresiones y poco clic, y las arregla. **Requiere GSC.**
+
+**Google Search Console** — requieren el conector de Search Console (aún no disponible)
+- gsc-auditor → lee datos vivos de GSC y saca quick wins priorizados por esfuerzo/impacto.
+- gsc-errors → agrupa los errores de indexación y cobertura y da el fix concreto de cada uno.
+
+**Semrush** — requieren Semrush conectado (aún no disponible)
+- semrush-auditor → resume el Site Audit de Semrush por severidad, no una lista cruda de flags.
+- semrush-errors → convierte los errores marcados por Semrush en fixes ejecutables rankeados por impacto.
+
+**SEO técnico**
+- technical-auditor → crawlea las páginas clave y agrupa los problemas técnicos por tipo.
+- technical-errors → convierte los hallazgos técnicos en fixes con código, separando marketer de dev.
+- robots-checker → revisa robots.txt y meta robots buscando bloqueos que cuestan tráfico.
+- sitemap-validator → valida el sitemap XML (URLs rotas, redirects, no-canónicas, noindex, formato).
+
+**Keywords y enlaces**
+- keyword-clusterer → agrupa keywords en clusters por intención y mapea cada uno a una página.
+- backlink-analyzer → puntúa el perfil de enlaces, marca tóxicos y sigue altas/bajas.
+- github-seo-optimizer → optimiza repos de GitHub (README, descripción, topics) para que se encuentren.
+
+> **Conectores.** `semrush-auditor` y `semrush-errors` necesitan Semrush
+> conectado; `gsc-auditor` y `gsc-errors` el conector de Google Search
+> Console. Ninguno de los dos está disponible todavía — hasta entonces estas
+> cuatro skills solo sirven con datos pegados a mano. El resto funciona sin
+> conector (`ctr-booster` da su máximo con datos de GSC, pero acepta un
+> export manual).
+
 ### Bases de conocimiento
 - workflows-venta-whitemoon/ → catálogo de automatizaciones vendibles + playbook de construcción (n8n como receta; se construye nativo en el Supabase del cliente, nunca n8n en producción).
 
