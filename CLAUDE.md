@@ -205,7 +205,7 @@ y en los <script> no-JSON-LD.
 4. Goal-Driven Execution — definir criterios de éxito verificables
 
 ## SKILLS GLOBALES
-Ruta base: C:\Users\krisv\OneDrive\Documentos\GitHub\WHITEMOON-SKILLS-CLAUDE
+Ruta base: C:\Users\krisv\repos\WHITEMOON-SKILLS-CLAUDE
 
 Antes de cualquier tarea de diseño web leer:
 - .claude/skills/ui-ux-pro-max/SKILL.md
