@@ -69,13 +69,25 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 - Deploy: GitHub Pages
 - Org: NexusForgeIA
 
-## PRECIOS (sin permanencia en todos)
-- Auditoría IA: 899€ único
-- Spark: 499€ + 199€/mes
-- Core: 1.800€ + 199€/mes
-- Scale: 4.500€ + 449€/mes
-- Elite: 8.500€ + 799€/mes
-- Gestoría IA: 599€ + 299€/mes
+## CATÁLOGO — modelo de 3 productos (ninguno tiene permanencia)
+LA WEB NO PUBLICA TARIFA. Nunca escribir un precio: ni en web, ni en copy,
+ni en JSON-LD, ni en JS. El precio se cierra en una llamada.
+Fórmula estándar: "Propuesta a medida, sin permanencia."
+
+- **Spark** (/spark/) — agente de IA conversacional en la web que el cliente YA tiene.
+- **Core Spark Web** (/core/) — web nueva con el agente dentro + SEO y GEO/AEO
+  desde el día 1. Para quien NO tiene web.
+- **Agente IA Citas** (/agente-ia-citas/) — agente de reservas para negocios de
+  cita previa (peluquería, estética, uñas, barbería, taller, fisio, podología,
+  dental…): el cliente reserva solo por QR, con un enlace o desde el agente
+  embebido en su web, sin llamadas. Panel de citas (alta manual, mover/cancelar,
+  importar) y reseñas por WhatsApp que envía el propio negocio en un clic.
+  NO usa la API de WhatsApp Business ni envía nada automático. No garantiza ventas.
+- Los tres: propuesta a medida, sin permanencia. Spark y Core Spark Web:
+  operativo en 5-7 días laborables. (Agente IA Citas: plazo SIN cifra, aún no
+  verificado.)
+- Producto suelto: **Auditoría GEO IA** (/auditoria-geo-ia/) — pago único,
+  informe en 24h. En web: "Pago único · Sin permanencia", SIN cifra.
 
 ## COLORES WHITEMOON
 --bg: #08080d
