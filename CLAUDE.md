@@ -83,9 +83,7 @@ Fórmula estándar: "Propuesta a medida, sin permanencia."
   embebido en su web, sin llamadas. Panel de citas (alta manual, mover/cancelar,
   importar) y reseñas por WhatsApp que envía el propio negocio en un clic.
   NO usa la API de WhatsApp Business ni envía nada automático. No garantiza ventas.
-- Los tres: propuesta a medida, sin permanencia. Spark y Core Spark Web:
-  operativo en 5-7 días laborables. (Agente IA Citas: plazo SIN cifra, aún no
-  verificado.)
+- Los tres: propuesta a medida, sin permanencia, operativo en 5-7 días laborables.
 - Producto suelto: **Auditoría GEO IA** (/auditoria-geo-ia/) — pago único,
   informe en 24h. En web: "Pago único · Sin permanencia", SIN cifra.
 
