@@ -89,6 +89,102 @@ Fórmula estándar: "Propuesta a medida, sin permanencia."
 - Producto suelto: **Auditoría GEO IA** (/auditoria-geo-ia/) — pago único,
   informe en 24h. En web: "Pago único · Sin permanencia", SIN cifra.
 
+Ojo: /precios/ YA NO es fuente de verdad — hoy es un stub meta-refresh a /.
+No hay página de tarifa que consultar, así que el precio simplemente no se escribe.
+
+### PRODUCTOS RETIRADOS — no mencionar como producto en venta
+Orion / agente de voz · WhiteMoon 360 · Core RAG · Mini Core · Core Orion ·
+Orion IA Agent · Pack Ads · Calculadora ITP Pro · Scale · Elite · Orbit ·
+Gestoría IA · Orion IA Calls.
+
+/scale/, /elite/, /pack-ads/, /precios/, /servicios/, /recursos/, /mini-core/,
+/core-rag/, /core-orion/, /whitemoon-360/, /automatizaciones/ → /
+/orion-calls/ → /orion-agent/
+
+El SEO Guardian (check 9) solo falla con "Scale", "Elite", "Orion IA Calls",
+"Orbit", "Gestoría IA" y "Pack Ads". El resto hay que cazarlo a mano.
+WhiteMoon no gestiona publicidad (Meta Ads) ni como pack ni como servicio.
+
+/calculadora-itp/ y /calculadora-itp-vivienda/ son herramientas gratuitas y
+SIGUEN VIVAS. Lo retirado es el SaaS "Calculadora ITP Pro". No confundir.
+
+> NOTA TÉCNICA — `onboarding_clientes.pack` (Supabase): las claves de pack de
+> los productos retirados siguen vivas para los clientes ya instalados. Son
+> histórico operativo, NO catálogo de venta: no se borran, no se renombran y no
+> se usan para generar copy comercial ni para inferir qué se vende hoy.
+
+### PRECIOS PROHIBIDOS — no reintroducir
+Tarifa vieja. Ninguna cifra de precio de producto es válida ya.
+
+A · LAS 6 QUE EL GUARDIAN SÍ BLOQUEA
+  999€ · 1.800€ · 2.899€ · 3.200€ · 4.500€ · 8.500€
+  Lista BAD_PRICES literal de seo_guardian.py. Checks 8 y 13 sobre texto
+  visible de todas las páginas. Bloquean el PR. No hay que hacer nada más.
+
+B · LISTA MANUAL — EL GUARDIAN NO LAS VIGILA
+  Nadie las para. Grepear a mano en cada PR que toque copy, JSON-LD o JS.
+  - Tarifas antiguas (setup): 499€ · 599€ · 799€ · 899€ · 1.499€ · 1.899€ · 2.499€
+  - Tarifas antiguas (cuota): 99€/mes · 199€/mes · 299€/mes · 349€/mes · 449€/mes
+  - Productos retirados:      3.500€ · 6.500€ · 299€ · 149€
+
+  Grep de referencia:
+    grep -rnE "(499|599|799|899|1\.?499|1\.?899|2\.?499|3\.?500|6\.?500|299|149) ?€|(99|199|299|349|449) ?€ ?/ ?mes" --include=*.html --include=*.js . | grep -v "Claude outputs"
+
+  VERIFICAR SIEMPRE CON CONTEXTO antes de tocar nada. El patrón que confirma
+  que es tarifa de producto y no otra cosa es `\d+€\s*\+\s*\d+€/mes`
+  (setup + cuota juntos). Los números sueltos dan muchísimos falsos positivos.
+
+No se amplía BAD_PRICES con números sueltos: "99", "149", "199", "299" y "499"
+son subcadenas de cifras legítimas por todo el sitio (el 199 del teléfono, los
+1499/1999 cc del BOE, el z-index:499) y reventaría de falsos positivos. Si se
+amplía, con el patrón de contexto, nunca con el número suelto.
+
+FALSOS POSITIVOS conocidos — NO son precios:
+- 34643199580 / "643 199 580" — el teléfono de WhatsApp contiene "199".
+- z-index:499 en /electricistas-madrid/.
+- /calculadora-itp/: [[999,45],[1499,60],[1999,90]] son centímetros cúbicos (BOE).
+- /calculadora-impuesto-matriculacion/: co2 <= 199 g/km; Ley 38/1992.
+- /calculadora-prestacion-paro/: diasCotizados < 1800; tipos legales 70%/60%/IPREM.
+- Cuota RETA, IVA 10%, SS 6,35%, IBI 1% y demás constantes fiscales.
+- 33.500 € en /calculadora-ingresos-reales-autonomo/ contiene "3.500" como
+  subcadena. Igual con cualquier importe acabado en una cifra vigilada.
+- Los importes de ejemplo de las calculadoras: son supuestos del usuario.
+
+DONDE NO MIRA NADIE: los stubs de redirección están en IGNORED_DIRS, así que el
+Guardian NO revisa su <meta name="description"> — y esa descripción sí la sirve
+Google. Al retirar un producto, limpiar también el meta del stub.
+
+## NADA CABLEADO EN JAVASCRIPT
+Ningún precio ni claim de rendimiento cableado en JS de cara al cliente ni en
+assets/webmcp.js.
+
+seo_guardian.py hace soup(['script','style']).extract() antes de escanear: EL
+GUARDIAN NO MIRA DENTRO DE <script> NI DE LOS .js. Verificar con grep a mano en
+cada PR que toque JS:
+
+    grep -rnE "[0-9][0-9.]*\s?€|€\s?/\s?mes|puesta en marcha" --include=*.js --include=*.html .
+    grep -rnE "\*\s?0\.[0-9]+|[Rr]educci[óo]n [0-9]+%|se amortiza" --include=*.js --include=*.html .
+
+- Si una constante mueve el resultado que ve el usuario, la pone el usuario en
+  un input y se declara a la vista. Nada de EFICACIA = .65 escondido.
+- assets/webmcp.js es lo que leen los asistentes de IA: un precio ahí lo repiten
+  meses aunque cambie la tarifa. Respuesta fija: "Propuesta a medida, sin
+  permanencia. La cerramos en una llamada." Hoy no tiene ni un símbolo €.
+
+MEJORA FUTURA: extender seo_guardian.py con un check que grepee precios en .js
+y en los <script> no-JSON-LD.
+
+## CLAIMS — qué se puede decir
+- NADA de "#1 en ChatGPT" ni "los primeros en Grok": los asistentes no tienen
+  ranking posicional y la metodología no lo soporta.
+- SÍ vale: "recomendados por ChatGPT y Grok (citas verificadas, no posición #1)".
+  Hay capturas desde septiembre de 2026 — citar la frase con su fecha, sin
+  adjuntar la imagen (enseña precios y "voz", ambos retirados).
+- Sin testimonios ficticios y sin cifras de rendimiento inventadas: nada de
+  "+X% de conversión", "recuperan la inversión en X días" ni "media de nuestros
+  clientes" sin una fuente que se pueda enseñar. Si el dato no existe, el número
+  lo pone el usuario en un input, etiquetado como supuesto suyo.
+
 ## COLORES WHITEMOON
 --bg: #08080d
 --p: #7c4dff
@@ -109,6 +205,27 @@ Fórmula estándar: "Propuesta a medida, sin permanencia."
 2. Simplicity First — mínimo código que resuelve el problema
 3. Surgical Changes — tocar solo lo necesario
 4. Goal-Driven Execution — definir criterios de éxito verificables
+
+## SKILLS GLOBALES
+Ruta base: C:\Users\krisv\OneDrive\Documentos\GitHub\WHITEMOON-SKILLS-CLAUDE
+
+Antes de cualquier tarea de diseño web leer:
+- .claude/skills/ui-ux-pro-max/SKILL.md
+- .claude/skills/impeccable/SKILL.md
+- .claude/skills/frontend-ui-engineering/SKILL.md
+- .claude/skills/web-design-systems/SKILL.md
+
+Antes de cualquier tarea de código leer:
+- .claude/skills/debugging-and-error-recovery/SKILL.md
+- .claude/skills/performance-optimization/SKILL.md
+- .claude/skills/security-and-hardening/SKILL.md
+
+Skills WhiteMoon (siempre disponibles):
+- skills/seo-geo-aeo/SKILL.md
+- skills/chatbot/SKILL.md
+- skills/supabase/SKILL.md
+- skills/ui-design/SKILL.md
+- skills/git-flow/SKILL.md
 
 ## REGLA DE DISEÑO — LEER SIEMPRE PRIMERO
 Antes de cualquier demo o web visual:
