@@ -65,7 +65,7 @@ WhatsApp: 643 199 580 | Personal: 699 72 72 18
 - Frontend: HTML/CSS/JS puro (sin frameworks)
 - Backend: Supabase (mlaqtniujnvfxcvcourm)
 - IA: Claude API (claude-haiku-4-5-20251001)
-- CDN: nexusforgeia.github.io/whitemoon-cdn
+- CDN: cdn.whitemoon.es (Cloudflare Pages; github.io se mantiene como respaldo)
 - Deploy: GitHub Pages
 - Org: NexusForgeIA
 
